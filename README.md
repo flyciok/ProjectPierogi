@@ -1,1 +1,1 @@
-MEAN Stack APP all about pierogi# ProjectPierogi
+MEAN Stack APP all about pierogi #ProjectPierogi

@@ -1,0 +1,17 @@
+body {
+	size: 100% 100%;
+	background-color: #403434;
+	background-image: url("../images/background2.jpg");
+	background-size: auto;
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #ecbe03;
+}
+
+div.thumbnail {
+	background-color: #403434;
+	border: 1px solid #ecbe03;
+	margin-bottom: 0.75%;
+	margin-top: 0.75%;
+}
