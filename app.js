@@ -18,6 +18,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // ROUTING
 app.use("", routes);
 
+// // seedDB - TEMP
+require("./app/data/seed.js");
+
 // SERVER
 // set port
 app.set("port", 3000);
