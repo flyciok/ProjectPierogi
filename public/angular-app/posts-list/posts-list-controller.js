@@ -1,11 +1,12 @@
 angular.module("mean").controller("PostsListController", PostsListController);
 
-function PostsListController($http) {
+function PostsListController(dataFactory) {
 
 	var vm = this;
 
 	vm.head = "Our Recipes";
 
-	$http.get("/posts").then(function(response) { vm.posts = response.data });
-
+	dataFactory.displayPostsList().then(function(response) {
+		vm.posts = response;
+	});
 }
