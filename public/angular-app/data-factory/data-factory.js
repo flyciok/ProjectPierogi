@@ -3,7 +3,8 @@ angular.module("mean").factory("dataFactory", dataFactory);
 function dataFactory($http) {
 	return {
 		displayPostsList: displayPostsList,
-		displayPostId : displayPostId
+		displayPostId : displayPostId,
+		postPost : postPost
 	};
 
 	function displayPostsList() {
@@ -14,7 +15,13 @@ function dataFactory($http) {
 		return $http.get("/posts/" + postId).then(complete).catch(fail);
 	}
 
+	function postPost(newPost) {
+		console.log("newPost DF", newPost);
+		return $http.post("/posts", newPost).then(complete).catch(fail);
+	}
+
 	function complete(response) {
+		console.log(response.data);
 		return response.data;
 	}
 

@@ -20,11 +20,35 @@ module.exports.postsGetAll = function(req, res) {
 					.json(posts);
 			}
 		});
-}
+};
+
+module.exports.postsAddOne = function(req, res) {
+
+	console.log("POST new post");
+	console.log(req.body);
+
+	Post
+		.create({
+			author: req.body.author,
+			title: req.body.title,
+			image: req.body.image,
+			content: req.body.content
+		}, function(err, newPost) {
+			if (err) {
+				console.log("Error creating post");
+				res
+					.status(400)
+					.json(err);
+			} else {
+				console.log("Post created", newPost);
+				res
+					.status(201)
+					.json(newPost);
+			}
+		});
+};
 
 module.exports.postsGetOne = function(req, res) {
-
-	console.log(req.params);
 
 	var postId = req.params.postId;
 	console.log("GET post id:", postId);
@@ -45,4 +69,4 @@ module.exports.postsGetOne = function(req, res) {
 					.json(post);
 			} 
 		});
-}
+};

@@ -6,7 +6,13 @@ var ctrlPosts = require("../controllers/posts.controllers.js");
 
 router
 	.route("/posts")
-	.get(ctrlPosts.postsGetAll);
+	.get(ctrlPosts.postsGetAll)
+	.post(ctrlPosts.postsAddOne);
+
+// router
+// 	.post("/posts", function(req, res) {
+// 		console.log(req.body);
+// 	});
 
 router
 	.route("/posts/:postId")

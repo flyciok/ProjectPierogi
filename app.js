@@ -19,13 +19,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/node_modules", express.static(__dirname + "/node_modules"));
 
 // ENABLE PARSER ON POSTED FORMS
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // ROUTING
 app.use("", routes);
 
 // seedDB - TEMP
-require("./app/data/seed.js");
+// require("./app/data/seed.js");
 
 // SERVER
 // set port

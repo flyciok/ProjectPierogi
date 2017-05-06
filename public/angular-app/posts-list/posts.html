@@ -6,6 +6,11 @@
 				<h3 class="text-center"> {{ vm.head }} </h3>
 				<h5 class="text-center"> Feel free to browse our PIEROGIES recipes gathered from users all over the world!</h5>
 				<h5 class="text-center"> ALSO! Please share with the world your recipe! Everyone is eager to get to know it!</h5>
+				<div class="text-center">
+					<a ng-href="#/posts/new">
+						<button class="btn center"> ADD POST </button>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -17,7 +22,6 @@
 				<img src="{{ post.image }}">
 				<p>
 					{{ post.content | cutFilter:true:235 }}
-					<p>{{ post._id }}</p>
 					<a ng-href="#/posts/{{ post._id }}">Read more!</a>
 				</p>
 			</div>
