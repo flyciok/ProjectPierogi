@@ -8,6 +8,12 @@ var app = express();
 
 var routes = require("./app/routes");
 
+// Add middleware to console log every request
+app.use(function(req, res, next) {
+  console.log(req.method, req.url);
+  next();
+});
+
 // STATCI DIRECTORY SETUP (before routes)
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/node_modules", express.static(__dirname + "/node_modules"));
@@ -18,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // ROUTING
 app.use("", routes);
 
-// // seedDB - TEMP
+// seedDB - TEMP
 require("./app/data/seed.js");
 
 // SERVER

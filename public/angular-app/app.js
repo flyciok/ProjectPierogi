@@ -6,9 +6,14 @@ function config($routeProvider, $locationProvider) {
 	$locationProvider.hashPrefix("");
 
 	$routeProvider
-		.when("/posts", {
+		.when("/", {
 			templateUrl: "angular-app/posts-list/posts.html",
 			controller: PostsListController,
+			controllerAs: "vm"
+		})
+		.when("/posts/:postId", {
+			templateUrl: "angular-app/posts-single/post.html",
+			controller: PostsSingleController,
 			controllerAs: "vm"
 		});
 }

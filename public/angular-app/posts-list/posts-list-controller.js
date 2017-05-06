@@ -4,7 +4,7 @@ function PostsListController(dataFactory) {
 
 	var vm = this;
 
-	vm.head = "Our Recipes";
+	vm.head = "Your Recipes";
 
 	dataFactory.displayPostsList().then(function(response) {
 		vm.posts = response;
