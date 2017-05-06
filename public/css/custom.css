@@ -12,6 +12,21 @@ body {
 div.thumbnail {
 	background-color: #403434;
 	border: 1px solid #ecbe03;
-	margin-bottom: 0.75%;
-	margin-top: 0.75%;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
+
+div.pad {
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+}
+
+h5 {
+	color: #ecbe03;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
