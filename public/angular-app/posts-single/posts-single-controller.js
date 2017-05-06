@@ -1,14 +1,14 @@
 angular.module("mean").controller("PostsSingleController", PostsSingleController);
 
-function PostsSingleController($route, $routeParams, dataFactory) {
+function PostsSingleController($routeParams, dataFactory) {
 
 	var vm = this;
 	// console.log("rpar pid", $routeParams.postId);
 
-	var id = $routeParams.postId;
+	var postId = $routeParams.postId;
 
-	dataFactory.displayPostId(id).then(function(response) {
+	dataFactory.displayPostId(postId).then(function(response) {
 		vm.post = response;
 	});
-	
+
 }

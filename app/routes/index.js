@@ -16,7 +16,8 @@ router
 
 router
 	.route("/posts/:postId")
-	.get(ctrlPosts.postsGetOne);
+	.get(ctrlPosts.postsGetOne)
+	.put(ctrlPosts.postsUpdateOne);
 
 // router.get("/posts/:id", function(req, res) {
 // 	console.log(req.path);

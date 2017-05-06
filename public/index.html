@@ -7,11 +7,22 @@
 </head>
 <body>
 
-<div ng-view></div>
+	<div ng-view></div>
 
-<script src="../node_modules/angular/angular.min.js"></script>
-<script src="../node_modules/angular-route/angular-route.min.js"></script>
-<script src="angular-app/app.js"></script>
-<script src="angular-app/posts-list/posts-list-controller.js"></script>
+	<!-- libs and frameworks -->
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="../node_modules/angular-route/angular-route.min.js"></script>
+	<!-- angular config -->
+	<script src="angular-app/app.js"></script>
+	<!-- controllers -->
+	<script src="angular-app/posts-list/posts-list-controller.js"></script>
+	<script src="angular-app/posts-single/posts-single-controller.js"></script>
+	<script src="angular-app/posts-new/posts-new-controller.js"></script>
+	<script src="angular-app/posts-edit/posts-edit-controller.js"></script>
+	<!-- factory -->
+	<script src="angular-app/data-factory/data-factory.js"></script>
+	<!-- filters -->
+	<script src="angular-app/filters/cut-filter.js"></script>
+
 </body>
 </html>

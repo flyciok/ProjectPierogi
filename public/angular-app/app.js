@@ -19,6 +19,11 @@ function config($routeProvider, $locationProvider) {
 			templateUrl: "angular-app/posts-single/post.html",
 			controller: PostsSingleController,
 			controllerAs: "vm"
+		})
+		.when("/posts/:postId/edit", {
+			templateUrl: "angular-app/posts-edit/edit.html",
+			controller: PostsEditController,
+			controllerAs: "vm"
 		});
 }
 

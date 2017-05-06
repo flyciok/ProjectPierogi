@@ -4,20 +4,20 @@
 		<div class="col-lg-12 pad">
 			<div class="thumbnail">
 
-				<h3 class="text-center"> Add new POST </h3>
+				<h3 class="text-center"> Edit your POST </h3>
 
-				<form name="vm.newPostForm" ng-submit="vm.addPost()">
+				<form name="vm.newPostForm" ng-submit="vm.editPost()">
 					<div class="form-group">
-						<input class="form-control" type="text" name="author" placeholder="Name" ng-model="vm.author">
+						<input class="form-control" type="text" name="author" ng-model="vm.post.author">
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="title" placeholder="Title" ng-model="vm.title">
+						<input class="form-control" type="text" name="title" ng-model="vm.post.title">
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="image" placeholder="ImageURL" ng-model="vm.image">
+						<input class="form-control" type="text" name="image" ng-model="vm.post.image">
 					</div>
 					<div class="form-group">
-						<input class="form-control" type="text" name="content" placeholder="..." ng-model="vm.content">
+						<input class="form-control" type="text" name="content" ng-model="vm.post.content">
 					</div>
 					<div class="form-group">
 						<button class="btn btn-lg btn-warning btn-block"> SUBMIT </button>

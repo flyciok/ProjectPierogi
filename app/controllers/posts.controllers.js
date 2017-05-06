@@ -70,3 +70,32 @@ module.exports.postsGetOne = function(req, res) {
 			} 
 		});
 };
+
+module.exports.postsUpdateOne = function(req, res) {
+
+	var postId = req.params.postId;
+	console.log("UPDATE post id:", postId);
+
+	var updateData = {
+		author: req.body.author,
+		title: req.body.title,
+		image: req.body.image,
+		content: req.body.content
+	};
+
+	Post
+		.findByIdAndUpdate(postId, updateData, function(err, updatedPost) {
+			if (err) {
+				console.log("Error updating post (findByIdAndUpdate)");
+				res
+					.status(400)
+					.json(err);
+			} else {
+				console.log("UPDATED post ID:", postId);
+				console.log(updatedPost);
+				res
+					.status(204)
+					.json(updatedPost);
+			}
+		});
+};
