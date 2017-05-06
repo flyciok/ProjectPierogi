@@ -9,6 +9,7 @@ mongoose.connection.on("connected", function() {
 });
 mongoose.connection.on("disconnected", function() {
 	console.log("Mongoose disconnected")
+	// mongoose.connection.models = {};
 });
 mongoose.connection.on("error", function(err) {
 	console.log("Mongoose error:", err);

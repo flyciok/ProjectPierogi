@@ -6,25 +6,23 @@ var postSchema = new mongoose.Schema({
 		// 	type: mongoose.Schema.Types.ObjectId,
 		// 	ref: "User"
 		// },
-		username: String
+		type: String
 	},
 	title: {
-		type: String,
-		required: true
+		type: String
 	},
 	image: {
 		type: String
 	},
 	content: {
-		type: String,
-		required: true
-	},
-	reviews: [
-		{
-			type: mongoose.Schema.Types.ObjectId,
-			ref: "Comment"
-		}
-	],
+		type: String
+	}
+	// reviews: [
+	// 	{
+	// 		type: mongoose.Schema.Types.ObjectId,
+	// 		ref: "Comment"
+	// 	}
+	// ],
 	// location: {
 	// 	address: String,
 	// 	coordinates: {
