@@ -5,7 +5,8 @@ function dataFactory($http) {
 		displayPostsList: displayPostsList,
 		displayPostId : displayPostId,
 		postPost : postPost,
-		putPost : putPost
+		putPost : putPost,
+		destroyPost: destroyPost
 	};
 
 	function displayPostsList() {
@@ -24,6 +25,13 @@ function dataFactory($http) {
 	function putPost(postId, editPost) {
 		console.log("editPost DF", editPost);
 		return $http.put("/posts/" + postId, editPost).then(complete).catch(fail);
+	}
+
+	function destroyPost(postId) {
+		console.log("destroyPost", postId);
+		return $http.delete("/posts/" + postId).then(function() {
+			console.log("Post deleted");
+		}).catch(fail);
 	}
 
 	function complete(response) {

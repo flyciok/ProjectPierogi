@@ -11,6 +11,9 @@
 						{{ vm.post.content }}
 					</h5>
 				</div>
+				<form name="vm.deletePostForm" ng-submit="vm.deletePost()">
+					<button class="btn"> DELETE </button>
+				</form>
 				<a ng-href="#/posts/{{ vm.post._id }}/edit">
 					<button class="btn"> EDIT </button>
 				</a>

@@ -99,3 +99,23 @@ module.exports.postsUpdateOne = function(req, res) {
 			}
 		});
 };
+
+module.exports.postsDeleteOne = function(req, res) {
+
+	var postId = req.params.postId;
+	console.log("DELETE post id:", postId);
+
+	Post
+		.findByIdAndRemove(postId, function(err) {
+			if (err) {
+				console.log("Error deleting post (findByIdAndRemove)");
+				res
+					.status(400)
+					.json(err);
+			} else {
+				res
+					.status(204)
+					.json();
+			}
+		});
+};

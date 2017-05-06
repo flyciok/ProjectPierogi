@@ -9,19 +9,10 @@ router
 	.get(ctrlPosts.postsGetAll)
 	.post(ctrlPosts.postsAddOne);
 
-// router
-// 	.post("/posts", function(req, res) {
-// 		console.log(req.body);
-// 	});
-
 router
 	.route("/posts/:postId")
 	.get(ctrlPosts.postsGetOne)
-	.put(ctrlPosts.postsUpdateOne);
-
-// router.get("/posts/:id", function(req, res) {
-// 	console.log(req.path);
-// 	console.log(req.params);
-// });
+	.put(ctrlPosts.postsUpdateOne)
+	.delete(ctrlPosts.postsDeleteOne);
 
 module.exports = router;
